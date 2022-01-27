@@ -18,6 +18,7 @@ pipeline {
          }
          stage('Deploy k8') {
                steps {
+               sh 'ssh ubuntu@  3.145.195.158'    
                sh 'kubectl apply -f deploy.yaml'
                }
          }
