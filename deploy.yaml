@@ -21,4 +21,18 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol:
+      port: 80
+      targetPort: 5000
+  selector:
+    app: flask
 
