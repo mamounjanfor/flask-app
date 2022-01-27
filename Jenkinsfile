@@ -16,6 +16,11 @@ pipeline {
                sh 'docker push 19841022/flask'
                }
          }
+         stage('Deploy k8') {
+               steps {
+               sh 'kubectl apply -f deploy.yaml'
+               }
+         }
          stage('Testing') {
               steps {
                     echo 'Testing...'
