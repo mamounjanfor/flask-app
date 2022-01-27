@@ -16,8 +16,15 @@ pipeline {
                sh 'docker push 19841022/flask'
                }
          }
+         stage('copy deployment file') {
+               steps {
+               sh "scp -o StrictHostKeyChecking=no deploy.yaml ubuntu@3.145.195.158:/home/ubuntu"
+               }
+         }       
          stage('Deploy k8') {
                steps {
+                
+     
                sh 'ssh ubuntu@3.145.195.158 kubectl apply -f deploy.yaml'    
                }
          }
