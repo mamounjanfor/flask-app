@@ -1,6 +1,6 @@
 ---
 - name: create service for deployment
-  hosts: 3.145.195.158
+  hosts: all
   become: true
   #user: ubuntu
 
