@@ -15,6 +15,10 @@ pipeline {
                steps {
                sh 'docker push 19841022/flask'
                }
+         stage('ansible deploy') {
+               steps {
+               sh 'ansible-playbook ansib.yml'
+               }
          }
          stage('copy deployment file') {
                steps {
