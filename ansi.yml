@@ -1,8 +1,8 @@
 ---
 - name: create service for deployment
-  hosts: kube
-  become: true
-  #user: ubuntu
+  hosts: 3.145.195.158
+  #become: true
+  user: ubuntu
 
   tasks:
   - name: create a service
