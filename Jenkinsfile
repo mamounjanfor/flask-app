@@ -18,6 +18,8 @@ pipeline {
          }
          stage('ansible deploy') {
                steps {
+               sh 'ls'
+               sh 'pwd'
                sh 'ansible-playbook ansi.yml'
                }
          }
