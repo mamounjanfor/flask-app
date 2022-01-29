@@ -2,7 +2,7 @@
 - name: create service for deployment
   hosts: all
   #become: true
-  user: ubuntu
+  user: jenkins
 
   tasks:
   - name: create a service
