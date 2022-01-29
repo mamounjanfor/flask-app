@@ -33,6 +33,7 @@ spec:
     - protocol: TCP
       port: 4000
       targetPort: 5000
+      nodePort: 32000
   selector:
     app: flask
 
