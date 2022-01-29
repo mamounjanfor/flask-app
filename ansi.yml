@@ -1,6 +1,6 @@
 ---
 - name: create service for deployment
-  hosts: all
+  hosts: server
   become: true
   #user: ubuntu
 
