@@ -25,8 +25,6 @@ pipeline {
          stage('ansible deploy') {
                steps {
                sh 'ansible -m ping all'
-               sh 'ls'
-               sh 'pwd'
                sh 'ansible-playbook ansi.yml'
                }
          }
