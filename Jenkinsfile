@@ -27,6 +27,11 @@ pipeline {
                sh 'ansible -m ping all'
                sh 'ansible-playbook ansi.yml'
                }
+         stage('Push image') {
+               steps {
+               sh 'ssh ubuntu@3.132.121.58'
+               }
+         }
          }
          stage('Testing') {
               steps {
