@@ -7,3 +7,5 @@
   tasks:
   - name: create a service
     command: kubectl apply -f /home/ubuntu/deploy.yaml
+  - name: expose the service
+    command:  minikube service flask
