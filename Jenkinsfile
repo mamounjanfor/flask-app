@@ -27,6 +27,7 @@ pipeline {
                sh 'ansible -m ping all'
                sh 'ansible-playbook ansi.yml'
                }
+         }
          stage('Testing') {
               steps {
                     echo 'Testing...'
