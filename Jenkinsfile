@@ -29,7 +29,7 @@ pipeline {
                }
          stage('expose the app') {
                steps {
-               sh "ssh ubuntu@3.132.121.58 minikube service flask"
+               sh 'ssh ubuntu@3.132.121.58 minikube service flask'
                }
          }
          stage('Testing') {
