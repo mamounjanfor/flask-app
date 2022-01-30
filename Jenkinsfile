@@ -18,8 +18,8 @@ pipeline {
          }
          stage('copy the files') {
                steps {
-               sh "scp -o StrictHostKeyChecking=no deploy.yaml ubuntu@3.14.151.184:/home/ubuntu"
-               sh "scp -o StrictHostKeyChecking=no ansi.yml ubuntu@3.14.151.184:/home/ubuntu"
+               sh "scp -o StrictHostKeyChecking=no deploy.yaml ubuntu@3.132.121.58:/home/ubuntu"
+               sh "scp -o StrictHostKeyChecking=no ansi.yml ubuntu@3.132.121.58:/home/ubuntu"
                }
          }       
          stage('ansible deploy') {
