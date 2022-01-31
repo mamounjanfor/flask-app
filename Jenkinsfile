@@ -22,7 +22,7 @@ pipeline {
                sh "scp -o StrictHostKeyChecking=no ansi.yml ubuntu@3.132.121.58:/home/ubuntu"
                }
          }       
-         stage('Create deployment') {
+         stage('Create deployment and Service') {
                steps {
                sh 'ansible -m ping all'
                sh 'ansible-playbook ansi.yml'
